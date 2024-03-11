@@ -1,4 +1,4 @@
-import protobuf from 'protobufjs';
+
 import { Message, Player } from "../types";
 
 const isGameReady = (gameMessages: Message[]): boolean => {
@@ -39,27 +39,6 @@ const SHIPS: Ship[] = [
     { id: 4, size: 2, orientation: "vertical", placed: false },
     { id: 5, size: 2, orientation: "vertical", placed: false },
   ];
-  
-  
-  const ChatMessage = new protobuf.Type('ChatMessage')
-    .add(new protobuf.Field('timestamp', 1, 'uint64'))
-    .add(new protobuf.Field('sender', 2, 'string'))
-    .add(new protobuf.Field('message', 3, 'string'))
-    .add(new protobuf.Field('id', 4, 'string'));
 
 
-const MoveMessage = new protobuf.Type('MoveMessage')
-    .add(new protobuf.Field('timestamp', 1, 'uint64'))
-    .add(new protobuf.Field('sender', 2, 'string'))
-    .add(new protobuf.Field('move', 5, 'string'))
-    .add(new protobuf.Field('id', 4, 'string'));
-
-
-const MoveReplyMessage = new protobuf.Type('MoveReplyMessage')
-    .add(new protobuf.Field('timestamp', 1, 'uint64'))
-    .add(new protobuf.Field('sender', 2, 'string'))
-    .add(new protobuf.Field('hit', 6, 'uint64'))
-    .add(new protobuf.Field('id', 4, 'string'));    
-
-
-export {isGameReady, BOARD_SIZE, createBoard, ChatMessage, SHIPS, MoveMessage, MoveReplyMessage}
+export {isGameReady, BOARD_SIZE, createBoard, SHIPS }

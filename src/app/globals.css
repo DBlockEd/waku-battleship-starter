@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  display: inline-flex;
+  width: 100%;
+
+}
+
+.marker-class {
+  border: 1px solid red;
+}
+
+.left-section {
+  width: 50%;
+
+}
+
+.right-section {
+  width: 50%;
+
+}
+
+.player-board {
+  width: 100%;
+}
+
+.opponent-board {
+  width: 100%;
+
+}
+
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+}
+
+.cell:hover {
+  background-color: lightgray;
+}
+
+/* Continue using previous styles and add the following */
+
+.ship-selection button {
+  margin: 5px;
+  padding: 5px;
+}
+
+.ship-selection button:disabled {
+  background-color: #ccc;
+  color: #666;
+}
+
+/* Continue with previous styles, and add/update the following */
+.cell.ship {
+  background-color: black;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #f0f0f0;
+  /* Light grey background for empty cells */
+}
+
+.cell.ship {
+  background-color: black;
+  /* Black background for cells with a ship */
+}
